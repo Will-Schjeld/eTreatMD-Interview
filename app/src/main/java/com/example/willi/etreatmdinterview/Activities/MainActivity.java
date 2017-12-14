@@ -1,4 +1,4 @@
-package com.example.willi.etreatmdinterview;
+package com.example.willi.etreatmdinterview.Activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+
+import com.example.willi.etreatmdinterview.CustomListAdapter;
+import com.example.willi.etreatmdinterview.DownloadFilesTask;
+import com.example.willi.etreatmdinterview.R;
+
 import java.net.URL;
 import java.util.HashMap;
 import java.util.HashSet;
