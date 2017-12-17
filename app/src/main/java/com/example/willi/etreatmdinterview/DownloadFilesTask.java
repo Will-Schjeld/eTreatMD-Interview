@@ -9,6 +9,8 @@ import java.util.Map;
 
 /**
  * Created by Willi on 12/13/2017.
+ *
+ * This class allows for a json file to be fetched from a url
  */
 
 public class DownloadFilesTask extends AsyncTask<URL, Void, Map<String,String>> {

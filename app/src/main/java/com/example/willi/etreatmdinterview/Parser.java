@@ -12,18 +12,24 @@ import java.util.Map;
 
 /**
  * Created by Willi on 12/13/2017.
+ *
+ * This class allows for parsing of a json file
  */
 
 public class Parser {
 
     private InputStream inputStream;
 
+    /**
+     * Constructs a parser object
+     * @param in Inputstream representing a valid json array.
+     */
     public Parser(InputStream in){
         this.inputStream = in;
     }
 
     /**
-     * Method to parse a given json file
+     * Parses a given json file
      * @return a mapping of patient ids to patient names
      * @throws IOException
      */
