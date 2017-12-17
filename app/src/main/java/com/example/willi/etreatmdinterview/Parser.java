@@ -22,12 +22,17 @@ public class Parser {
         this.inputStream = in;
     }
 
+    /**
+     * Method to parse a given json file
+     * @return a mapping of patient ids to patient names
+     * @throws IOException
+     */
     public Map<String,String> parse() throws IOException{
         JsonReader jsonReader = new JsonReader(new InputStreamReader(inputStream));
         return readDataArray(jsonReader);
     }
 
-
+    //reads the json arrays and returns a map with IDs as keys and Names as the value
     private Map<String, String> readDataArray(JsonReader reader) throws IOException {
         //Maps Unique ID to a patient
         Map<String, String> patientsAndIDsMap = new HashMap<>();
@@ -40,7 +45,7 @@ public class Parser {
         reader.endArray();
         return patientsAndIDsMap;
     }
-
+    //reads the json objects and returns a list in the format {ID, Name}
     private List<String> readMessage(JsonReader reader) throws IOException{
         List<String> patientAndIDList = new ArrayList<>();
         String patientName = "";
@@ -59,7 +64,7 @@ public class Parser {
                 reader.skipValue();
             }
         }
-        reader.endArray();
+        reader.endObject();
 
         patientAndIDList.add(patientId);
         patientAndIDList.add(patientName);

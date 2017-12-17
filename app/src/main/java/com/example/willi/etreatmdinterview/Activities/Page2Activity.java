@@ -30,6 +30,7 @@ public class Page2Activity extends AppCompatActivity {
         TextView idText = (TextView) findViewById(R.id.IDPage2);
         idText.setText(savedIDExtra);
 
+        //Sets a button to take a picture on page 2
         imageView = (ImageView) findViewById(R.id.imageView);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
